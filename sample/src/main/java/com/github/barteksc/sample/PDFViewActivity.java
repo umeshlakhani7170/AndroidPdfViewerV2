@@ -152,7 +152,7 @@ public class PDFViewActivity extends AppCompatActivity implements OnPageChangeLi
         setTitle(String.format("%s %s / %s", pdfFileName, page + 1, pageCount));
     }
 
-    public String getFileName(Uri uri) {
+    public String getFileName(@NonNull Uri uri) {
         String result = null;
         if (uri.getScheme().equals("content")) {
             Cursor cursor = getContentResolver().query(uri, null, null, null, null);
@@ -188,7 +188,7 @@ public class PDFViewActivity extends AppCompatActivity implements OnPageChangeLi
 
     }
 
-    public void printBookmarksTree(List<PdfDocument.Bookmark> tree, String sep) {
+    public void printBookmarksTree(@NonNull List<PdfDocument.Bookmark> tree, String sep) {
         for (PdfDocument.Bookmark b : tree) {
 
             Log.e(TAG, String.format("%s %s, p %d", sep, b.getTitle(), b.getPageIdx()));

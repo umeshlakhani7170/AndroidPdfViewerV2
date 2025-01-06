@@ -21,8 +21,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation(project(":android-pdf-viewer"))
-    implementation 'com.github.barteksc:pdfium-android:1.7.1'
-    annotationProcessor 'org.androidannotations:androidannotations:4.0.0'
+    implementation 'com.github.barteksc:pdfium-android:1.9.0'
     implementation 'org.androidannotations:androidannotations-api:4.0.0'
     implementation(platform('org.jetbrains.kotlin:kotlin-bom:2.1.0'))
 }

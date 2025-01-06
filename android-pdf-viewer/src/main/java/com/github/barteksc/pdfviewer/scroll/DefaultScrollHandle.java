@@ -4,12 +4,13 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
-import androidx.core.content.ContextCompat;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.R;
@@ -78,11 +79,7 @@ public class DefaultScrollHandle extends RelativeLayout implements ScrollHandle 
             }
         }
 
-        if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.JELLY_BEAN) {
-            setBackgroundDrawable(background);
-        } else {
-            setBackground(background);
-        }
+        setBackground(background);
 
         LayoutParams lp = new LayoutParams(Util.getDP(context, width), Util.getDP(context, height));
         lp.setMargins(0, 0, 0, 0);
